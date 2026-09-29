@@ -9,3 +9,5 @@ footer{border-top:1px solid var(--border);padding:30px 0;color:var(--muted);font
 @media(max-width:760px){.grid{grid-template-columns:1fr}.row{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:48px}.tool-head h1{font-size:32px}}
 
 .sponsored{margin:22px auto 0;display:flex;align-items:center;justify-content:center;gap:10px;font-size:13px}.sponsored span{color:var(--muted)}.sponsored a{display:inline-block;padding:9px 14px;border:1px solid var(--border);border-radius:9px;background:#fff;color:var(--brand);font-weight:700;box-shadow:var(--shadow)}.sponsored a:hover{transform:translateY(-1px)}
+
+.ad-banner{margin:24px auto;text-align:center;min-height:60px;overflow:hidden}.ad-script{margin:20px auto;text-align:center;overflow:hidden}
