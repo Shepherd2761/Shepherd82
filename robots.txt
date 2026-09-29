@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://SHEPHERD2761.github.io/Shepherd82/sitemap.xml
