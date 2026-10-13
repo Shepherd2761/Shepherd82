@@ -21,9 +21,15 @@ jobs:
       - uses: actions/configure-pages@v5
         with:
           enablement: true
+      - name: Prepare deploy directory
+        run: |
+          mkdir -p site
+          rsync -a --exclude='.git' --exclude='.github' --exclude='site' ./ site/
+      - name: Apply site-wide SEO metadata and structured data
+        run: python .github/scripts/seo_build.py site
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
