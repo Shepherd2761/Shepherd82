@@ -25,6 +25,8 @@ jobs:
         run: |
           mkdir -p site
           rsync -a --exclude='.git' --exclude='.github' --exclude='site' ./ site/
+      - name: Generate extended calculator catalog
+        run: python .github/scripts/generate_catalog_tools.py site
       - name: Apply site-wide SEO metadata and structured data
         run: python .github/scripts/seo_build.py site
       - uses: actions/upload-pages-artifact@v3
